@@ -4,369 +4,574 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Pyramid tech</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home Page</title>
 </head>
-<body>
-    <div id="procarddetails" class="color1">
+<body class="bgcolor">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div id="procarddetails" class="bgcolor">
         <i class="fa-solid fa-xmark" id="closecon"></i>
-        <div id="detailscard" class="title">
+        <div id="detailscard" class="txtcolor">
 
         </div>
     </div>
-    <div  id="mode"class="menu">
-        <i class="fa-solid fa-sun"></i>
+    <div class="menucon" id="menucon">
+        <i id="closedetwin" class="fa-solid fa-xmark close" ></i>
+        <div id="detailcontainer" class="bgcolor">
+            <div class="logo txtcolor">
+                <h1>Santa Soft</h1>
+                <img src="/img/santalogo.png" alt="logo">
+            </div>
+            <div class="navigations txtcolor">
+                <ul class="navsbar txtcolor">
+                    <li class="active" dataid="#home">HOME</li>
+                    <li dataid="#about">ABOUT</li>
+                    <li dataid="#portofolio2">PROJECTS</li>
+                    <li dataid="#contact">CONTACT</li>
+                    <li dataid="blogs.html">BLOGS</li>
+                </ul>
+                <div style="display: flex;align-items: center;justify-content:center;">
+                    <i class="fa-solid fa-sun"></i>
+                    <div id="theme-toggle">
+                        <div id="cursor"></div>
+                    </div>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="navs">
-        <ul>
-            <li>
-                <a href="#con2">
-                <i class="fa-solid fa-user"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#con3">
-                <i class="fa-brands fa-slack"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#con4">
-                <i class="fa-solid fa-folder-open"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#con5">
-                <i class="fa-solid fa-envelope"></i>
-                </a>
-            </li>
-        </ul>
+    <div class="window" id="window">
+        <i id="closedetwin2" class="fa-solid fa-xmark close2" ></i>
+        <div id="detailcontainer2" class="bgcolor">
+                <div class="left">
+                    <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: start;">
+                        <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+                        <h1>Contact Details</h1>
+                    </div>
+                    <h2>Leave Your hiring app</h2>
+                    <p>Ready to turn your vision into reality? We'd love to hear about your project.  Feel free to reach out using the form below, or give us a call to discuss your specific needs. Our team is eager to collaborate and bring your innovative ideas to life.</p>
+                </div>
+                <div class="right">
+                    <div class="cover">
+                        <div class="inputs">
+                            <div style="width: 80%;display: flex;justify-content: space-between;align-items: center;flex-direction: row;height:7%;" >
+                                <input type="text" id="fname_input" placeholder="first name">
+                                <input type="text" id="lname_input" placeholder="last name">
+                            </div>
+                            <label for="email_input">Email : </label>
+                            <input type="email" id="email_input" placeholder="email">
+                            <label for="phone_input">Phone : </label>
+                            <input type="number" id="phone_input" placeholder="phone">
+                            <label for="country_input">Country : </label>
+                            <input type="text" id="country_input" placeholder="country">
+                            <label for="job_input">Job : </label>
+                            <textarea id="job_input"  cols="30" rows="10" placeholder="job discreption"></textarea>
+                        </div>
+                        <button id="submitjobbtn">submit</button>
+                    </div>
+                </div>
+        </div>
     </div>
+    <header>
+        <i class="fa-solid fa-bars txtcolor" id="menubtn"></i>
+        <div class="logo txtcolor">
+            <img src="/img/santalogo.png" alt="logo">
+            <h1>Santa Soft</h1>
+        </div>
+        <div class="navigations txtcolor">
+            <ul class="navsbar txtcolor">
+                <li class="active" dataid="#home">HOME</li>
+                <li dataid="#about">ABOUT</li>
+                <li dataid="#portofolio">PROJECTS</li>
+                <li dataid="#contact">CONTACT</li>
+                <li dataid="blogs.html">BLOGS</li>
+            </ul>
+            <div style="display: flex;align-items: center;justify-content:center;">
+                <i class="fa-solid fa-sun"></i>
+                <div id="theme-toggle">
+                    <div id="cursor"></div>
+                </div>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
     <div id="upbtn" class="upbtn">
         <i class="fa-solid fa-arrow-up"></i>
     </div>
-    <div id="con1" class="maincon color1">
-    <img src="images/tigertech.png" id="logo1" alt="">
-        <img src="images/Hand coding-bro.png" id="logo2" alt="">
-        <div class="con1">
-            <h2 class="title">Hello, Our Name is <span>TIGER TECH</span></h2>
+    <section class="home" id="home">
+        <div class="rightcon">
+            <h1 class="txtcolor">Welcome To <span>SANTASOFT</span></h1>
             <div class="textanime" id="textanime">
-                <h3 class="text first-text title">We Are </h3>
+                <h3 class="text txtcolor">We Are </h3>
                 <span id="sec-text" class="text sec-text"></span>
             </div>
-            <p class="title">We Are web developers with extensive experince for over 3 years,Android developers for over 1 year and graphic designer for 3 years.</p>
-            <a href="#con2" class="aa"> More About Us</a>
-            <div class="nav">
-                <a target="_blank" href="https://github.com/mohamedabdelgha"><i class="fa-brands fa-github"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/mohamed-abd-elghany-98b7a7287"><i class="fa-brands fa-linkedin"></i></a>
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=100090556187495&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-                <a target="_blank" href="https://instagram.com/abdelghani99935?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+            <p class="txtcolor">
+                web developers with extensive 
+                experince for over 3 years , Android 
+                developers for over 1 year and graphic 
+                designer for 3 years.
+            </p>
+            <div class="navs">
+                <a href="#about">
+                    <div>
+                        <i class="fa-solid fa-plus"></i>
+                        <span>SEE MORE</span>
+                    </div>
+                </a>
+                <a href="#team">HIRE US</a>
+            </div>
+            <div class="links">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-square-threads"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
             </div>
         </div>
-        
-    </div>
-    <div id="con2" class="aboutcon color2">
-        <h1><i class="fa-solid fa-user"></i> About Us</h1>
-        <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aliquid rerum. Magnam assumenda voluptatum perspiciatis nesciunt illum ex odit dolores numquam, ducimus, voluptatibus obcaecati explicabo corporis dolorum incidunt nam est quis? Labore debitis quod explicabo nesciunt molestias eaque nobis nostrum ratione. Asperiores quas eaque voluptates repellendus repellat aut nesciunt architecto.</p>
-        <div class="members">
-            <div id="member1">
-                <h2 class="title"><i class="fa-regular fa-circle-user"></i></h2>
+        <div class="leftcon">
+            <div></div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="firstcon" style="position: relative;">
+            <div class="imageshape">
+                <div class="cover"></div>
             </div>
-            <div id="member2">
-                <h2 class="title"><i class="fa-regular fa-circle-user"></i></h2>
+            <div class="imageshape">
+                <div class="cover"></div>
             </div>
-            <div id="member3">
-                <h2 class="title"><i class="fa-regular fa-circle-user"></i></h2>
+            <img src="/img/rocket.gif" id="rocket" style="width: 20%;position: absolute;bottom: 0;z-index: 1;">
+        </div>
+        <div class="secondcon">
+            <div style="display: flex;width: 100%;align-items: center;gap: 15px;">
+                <div style="width: 5%;height: 3px;background: #6C328C;"></div>
+                <h1>ABOUT US</h1>
+            </div>
+            <h2>discover more about us :)</h2>
+            <p class="txtcolor">At SANTA SOFT, we're driven by a shared passion: transforming ideas into powerful software solutions. Our team of skilled programmers isn't just about writing code – they're creative problem-solvers who bring a wealth of experience to every project. We relish complex challenges, collaborating closely with our clients to understand their needs and craft solutions that exceed expectations. We believe in the power of continuous learning, staying at the forefront of the latest programming languages and technologies. This ensures our solutions are not only effective today but also built to scale and thrive in the ever-evolving digital landscape.  But our focus isn't just on the technical – we value clear communication and a collaborative approach.  We believe strong partnerships are key to success, and we work closely with our clients throughout the entire development process, fostering trust and transparency.</p>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="circle"></div>
+        <div class="top">
+            <h2>5</h2>
+            <div class="txt bgcolor">
+                <div style="width: 5%;height: 3px;background: #6C328C;"></div>
+                <h1>SERVICES</h1>
             </div>
         </div>
-        <div id="mem1" style="display: none;">
-            <div class="info">
-                <div class="infolist">
-                    <ul class="list1">
-                        <li>name: <span class="title">Mohamed Askar</span></li>
-                        <li>age: <span class="title">22</span></li>
-                        <li>phone number: <span class="title">01018364603</span></li>
-                        <li>email: <span class="title"></span></li>
-                    </ul>
-                    <ul class="list2">
-                        <li>location: <span class="title">egypt-elbehira-damnhour</span></li>
-                        <li>degree: <span class="title">is  (information system)</span></li>
-                        <li>faculity: <span class="title">computer and information science</span></li>
-                        <li>github: <span class="title">moabdelghany.info</span></li>  
-                    </ul>
-                    <div class="buttons">
-                        <a download="">download CV</a>
-                        <a href="#con5">Hire Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="skills1">
-                    <h2>My Skills</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                            <li>JAVASCRIPT</li>
-                        </ul>
-                        <ul>
-                            <li>NODE JS</li>
-                            <li>NEXT JS 14</li>
-                            <li>MANGO DB</li>
-                            <li>EXPRESS JS</li>
-                            <li>REACT</li>
-                        </ul>
-                        <ul>
-                            <li>FLUTTER</li>
-                            <li>FIREBASE</li>
-                            <li>PHOTOSHOP</li>
-                            <li>PREMIERE</li>
-                            <li>AFTER EFFECT</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills2">
-                    <h2>My Experinces</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="mem2" style="display: none;">
-            <div class="info">
-                <div class="infolist">
-                    <ul class="list1">
-                        <li>name: <span class="title">mohamed abd elghany</span></li>
-                        <li>age: <span class="title">22</span></li>
-                        <li>phone number: <span class="title">01014805573</span></li>
-                        <li>email: <span class="title">elghani888@gmail.com</span></li>
-                    </ul>
-                    <ul class="list2">
-                        <li>location: <span class="title">egypt-elbehira-damnhour</span></li>
-                        <li>degree: <span class="title">is  (information system)</span></li>
-                        <li>faculity: <span class="title">computer and information science</span></li>
-                        <li>github: <span class="title">moabdelghany.info</span></li>
-                    </ul>
-                    <div class="buttons">
-                        <a download="">download CV</a>
-                        <a href="#con5">Hire Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="skills1">
-                    <h2>My Skills</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                            <li>JAVASCRIPT</li>
-                        </ul>
-                        <ul>
-                            <li>NODE JS</li>
-                            <li>NEXT JS 14</li>
-                            <li>MANGO DB</li>
-                            <li>EXPRESS JS</li>
-                            <li>REACT</li>
-                        </ul>
-                        <ul>
-                            <li>FLUTTER</li>
-                            <li>FIREBASE</li>
-                            <li>PHOTOSHOP</li>
-                            <li>PREMIERE</li>
-                            <li>AFTER EFFECT</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills2">
-                    <h2>My Experinces</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="mem3" style="display: none;">
-            <div class="info">
-                <div class="infolist">
-                    <ul class="list1">
-                        <li>name: <span class="title">rahma salem</span></li>
-                        <li>age: <span class="title">22</span></li>
-                        <li>phone number: <span class="title">01014805573</span></li>
-                        <li>email: <span class="title">elghani888@gmail.com</span></li>
-                    </ul>
-                    <ul class="list2">
-                        <li>location: <span class="title">egypt-elbehira-damnhour</span></li>
-                        <li>degree: <span class="title">is  (information system)</span></li>
-                        <li>faculity: <span class="title">computer and information science</span></li>
-                        <li>github: <span class="title">moabdelghany.info</span></li>
-                    </ul>
-                    <div class="buttons">
-                        <a download="">download CV</a>
-                        <a href="#con5">Hire Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="skills1">
-                    <h2>My Skills</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                            <li>JAVASCRIPT</li>
-                        </ul>
-                        <ul>
-                            <li>NODE JS</li>
-                            <li>NEXT JS 14</li>
-                            <li>MANGO DB</li>
-                            <li>EXPRESS JS</li>
-                            <li>REACT</li>
-                        </ul>
-                        <ul>
-                            <li>FLUTTER</li>
-                            <li>FIREBASE</li>
-                            <li>PHOTOSHOP</li>
-                            <li>PREMIERE</li>
-                            <li>AFTER EFFECT</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills2">
-                    <h2>My Experinces</h2>
-                    <div class="skillist">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="con3"class="servicescon color1">
-        <h1><i class="fa-brands fa-slack"></i> Services</h1>
-        <div class="servcon">
+        <div class="bottom">
             <div class="card">
-                <i class="fa-solid fa-palette"></i>
-                <h3>web designing</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, rem accusantium. Cumque dolore optio veniam!</p>
+                <img src="/img/html.gif">
+                <h3>Web Development</h3>
+                <p>We craft user-centric websites that perform. Our web development process blends innovative design with cutting-edge technologies to create engaging and functional websites.  We focus on building user-friendly interfaces that deliver a seamless experience across all devices.</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-code"></i>
-                <h3>web developing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptas voluptatum quibusdam amet minima ab?</p>
+                <img src="/img/database-table.gif" alt="">
+                <h3>Hosting</h3>
+                <p>Focus on your code, we'll handle the infrastructure. we offer robust and reliable hosting solutions tailored to the needs of developers.  Whether you require shared hosting for a simple website or a dedicated server for a complex application, we have the resources and expertise to ensure your software runs smoothly and scales efficiently.</p>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-                <h3>hosting</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde ea nobis nisi repellendus cum.</p>
+            <div class="card">    
+                <img src="/img/layout.gif" alt="">
+                <h3>Web Design</h3>
+                <p>We create websites that captivate and convert.  Our web design team understands the power of a user-friendly and visually stunning website. We don't just design websites, we craft experiences. We'll work closely with you to understand your brand identity and target audience.</p>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-desktop"></i>
-                <h3>graphic design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde ea nobis nisi repellendus cum.</p>
+            <div class="card">    
+                <img src="/img/vector.gif" alt="">
+                <h3>Graphic Design</h3>
+                <p>Visually Striking, Functionally Flawless: we believe exceptional software deserves a stunning design. Our team of graphic designers collaborates closely with our programmers to create user interfaces (UIs) that are not only aesthetically pleasing but also intuitive and user-friendly. We understand the power of a well-designed interface to enhance user experience and brand recognition.</p>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-mobile"></i>
-                <h3>android developing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde ea nobis nisi repellendus cum.</p>
+            <div class="card">    
+                <img src="/img/phone-settings.gif" alt="">
+                <h3>Mobile Developement</h3>
+                <p>In today's mobile-first world, a strong mobile presence is crucial. our mobile development team specializes in crafting user-friendly and engaging applications for both iOS and Android platforms. We leverage the latest technologies to build secure and scalable apps that seamlessly integrate with existing systems.</p>
             </div>
         </div>
-    </div>
-    <div id="con4"class="portfoliocon color2">
-        <h1><i class="fa-solid fa-folder-open"></i> portfolio</h1>
-        <div class="porcon" id="prodcon">
+    </section>
+    <section class="team" id="team">
+        <div class="top">
+            <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: center;">
+                <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+                <h1>Team</h1>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="right" id="first">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="txtcolor">mohamed abd elghany</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="txtcolor"><span>email : </span> elghani888@gmail.com</td>
+                            <td class="txtcolor"><span>address : </span>egypt / elbehira / damnhour</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>phone : </span>01014805573</td>
+                            <td class="txtcolor"><span>degree : </span>IS</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>age : </span>22</td>
+                            <td class="txtcolor"><span>faculty : </span>computer and information systems</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="txtcolor">Skills</h3>
+                <ul class="skills">
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span   class="txtcolor">HTML</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">CSS</span>
+                    </li>   
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">JAVASCRIPT</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">NODE JS</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">FLUTTER</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">REACT</span>
+                    </li>
+                </ul>
+                <h3 class="txtcolor">Experince</h3>
+                <ul class="experince txtcolor">
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="right" id="second">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="txtcolor">rahma salem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="txtcolor"><span>email : </span></td>
+                            <td class="txtcolor"><span>address : </span>egypt / elbehira / edko</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>phone : </span></td>
+                            <td class="txtcolor"><span>degree : </span>It</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>age : </span>22</td>
+                            <td class="txtcolor"><span>faculty : </span>computer and information systems</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="txtcolor">Skills</h3>
+                <ul class="skills">
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span   class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                </ul>
+                <h3 class="txtcolor">Experince</h3>
+                <ul class="experince txtcolor">
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="right" id="third">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="txtcolor">mohamed abd elghany</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="txtcolor"><span>email : </span> elghani888@gmail.com</td>
+                            <td class="txtcolor"><span>address : </span>egypt / elbehira / damnhour</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>phone : </span>01014805573</td>
+                            <td class="txtcolor"><span>degree : </span>IS</td>
+                        </tr>
+                        <tr>
+                            <td class="txtcolor"><span>age : </span>22</td>
+                            <td class="txtcolor"><span>faculty : </span>computer and information systems</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="txtcolor">Skills</h3>
+                <ul class="skills">
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span   class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-shield"></i></div>
+                        <span  class="txtcolor">html</span>
+                    </li>
+                </ul>
+                <h3 class="txtcolor">Experince</h3>
+                <ul class="experince txtcolor">
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                    <li>
+                        <span>12/12/2023</span>
+                        <span>Lorem, ipsum dolor.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="left">
+                <div class="card" id="team_card" metadata="first">
+                    <img src="/img/santalogo.png" alt="">
+                    <h3>mohamed</h3>
+                </div>
+                <div class="card" id="team_card" metadata="second">
+                    <img src="/img/santalogo.png" alt="">
+                    <h3>rahma</h3>
+                </div>
+                <div class="card" id="team_card" metadata="third">
+                    <img src="/img/santalogo.png" alt="">
+                    <h3>mohamed</h3>
+                </div>
+            </div>
+        </div>
+        <div class="circle"></div>
+    </section>
+    <section class="prtofolio" id="portofolio">
+        <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: center;">
+            <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+            <h1>Portfolio</h1>
+        </div>
+        <div class="cardsWraper">
+            <i id="left" class="fa-solid fa-arrow-left"></i>
+            <div class="circle"></div>
+            <ul class="cardsCon" id="cardsCon">
+                <li class="card" style="display: none;">
+                    <div class="image">
+                        <img src="/img/Screenshot 2023-09-13 021306.png" alt="" draggable="false">
+                    </div>
+                    <div class="discreption">
+                        <h3>project1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sapiente.</p>
+                        <span>see more</span>
+                    </div>
+                </li>
+                
+            </ul>
+            <i id="right" class="fa-solid fa-arrow-right"></i>
+        </div>
+    </section>
+    <section class="prtofolio2" id="portofolio2">
+        <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: center;">
+            <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+            <h1>Portfolio</h1>
+        </div>
+        <div class="cardscontainer">
+            <div class="circle"></div>
+            <ul class="cardsCon" id="cardsCon2">
+                <li class="card" style="display: none;">
+                    <div class="image">
+                        <img src="/img/Screenshot 2023-09-13 021306.png" alt="" draggable="false">
+                    </div>
+                    <div class="discreption">
+                        <h3>project1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sapiente.</p>
+                        <span>see more</span>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <section class="FeedBack" id="feedbackcon">
+        <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: center;">
+            <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+            <h1>FeedBack</h1>
+        </div>
+        <div class="commetsWraper">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
+            <div class="circle"></div>
+            <ul class="commentsCon" id="commentsCon">
+                    <li class="comment">
+                        <h1>,,</h1>
+                        <div class="discreption" style="display: none;">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero excepturi sed impedit maiores doloribus fuga facilis, corporis in at consequuntur.</p>
+                            <h3>mohamed</h3>
+                            <span>12/12/2024</span>
+                        </div>
+                    </li>
             
         </div>
-        <!-- <a href="">see more ..</a> -->
-    </div>
-    <div id="con6" class="comentscon color1">
-        
-    </div>
-    <div id="con5" class="contact color1">
-        <h1><i class="fa-solid fa-envelope"></i> contact</h1>
-            <div class="contact2">
-                <div class="contactcon">
-                    <h2><i class="fa-brands fa-servicestack"></i> hire us</h2>
-                    <input type="text" id="clientname" placeholder="Name">
-                    <input type="text" id="clientmail" placeholder="Email">
-                    <input type="text" id="clientphone" placeholder="Phone">
-                    <input type="text" id="clientmass" placeholder="task you need to accomplish">
-                    <button id="sendmass">send</button>
+    </section>
+    <section class="FeedBack">
+        <div class="sendcon">
+            <div class="left">
+                <div style="display: flex;width: 100%;align-items: center;gap: 15px;justify-content: start;">
+                    <div style="width: 3%;height: 3px;background: #6C328C;"></div>
+                    <h1>FeedBack</h1>
                 </div>
-                <div class="comment">
-                    <h2><i class="fa-regular fa-comment-dots"></i> feed-back</h2>
-                    <input type="text" id="comname" placeholder="Name">
-                    <input type="text" id="comtext" placeholder="comment">
-                    <button id="addcom">leave a feedback</button>
+                <h2>Leave Your Feedback</h2>
+                <p>We value your input! we're constantly striving to improve and deliver the best possible service.  Your feedback is crucial in helping us achieve that.  Whether you have a suggestion for improvement, a question about a project, or simply want to share your experience, we encourage you to leave your comments below.  We appreciate your time and look forward to hearing from you!</p>
+            </div>
+            <div class="right">
+                <div class="cover">
+                    <div class="inputs">
+                        <label for="name">Name : </label>
+                        <input type="text" id="name" placeholder="Enter your name ...">
+                        <label for="Feedback">Feedback : </label>
+                        <input type="text" id="Feedback" placeholder="Enter your feedback ...">
+                    </div>
+                    <button id="submit">submit</button>
                 </div>
             </div>
-    </div>
-    <script type="module" src="js/index.js"></script>
-    <script src="js/main.js"></script>
+        </div>
+    </section>
+    <section class="footer" id="contact">
+        <div class="contact">
+            <div class="cover">
+                <input type="email" id="contact_input" placeholder="Enter your email">
+                <button id="submit_email">caontact us</button>
+            </div>
+        </div>
+        <ul class="txtcolor">
+            <li>
+                <img src="/img/santalogo.png" alt="">
+                <span>SANTA SOFT</span>
+            </li>
+            <li><i class="fa-solid fa-envelope"></i> santasoft101@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i> +20 1007981850</li>
+        </ul>
+        <ul class="txtcolor">
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+            <li>Help Center</li>
+        </ul>
+        <ul class="txtcolor">
+            <li class="head">others</li>
+            <li>Web Design</li>
+            <li>development</li>
+            <li>flutter</li>
+            <li>desktop</li>
+            <li>Blogs</li>
+        </ul>
+        <ul class="txtcolor">
+            <li><a class="txtcolor" href="#home">home</a></li>
+            <li><a class="txtcolor" href="#about">about us</a></li>
+            <li><a class="txtcolor" href="#services">services</a></li>
+            <li><a class="txtcolor" href="#portofolio">portofolio</a></li>
+            <li><a class="txtcolor" href="#feedback">feedback</a></li>
+            <li><a class="txtcolor" href="#contact">contact us</a></li>
+        </ul>
+        <div class="copyrights">
+            <p>@ 2022 Company, Inc. All rights reserved.</p>
+        </div>
+    </section>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
