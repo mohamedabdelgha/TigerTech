@@ -233,7 +233,7 @@ body{
 }
 header{
     z-index: 1;
-    width: 90%;
+    width: 80%;
     padding:0 ;
     height: fit-content;
     display: flex;
@@ -245,6 +245,7 @@ header{
 }
 header.fixed{
     position: fixed;
+    width:80%;
     top:0;
     z-index: 150;
     backdrop-filter: blur(15px);
@@ -1680,7 +1681,6 @@ header.fixed{
     header{
         width: 90%;
         padding:0 5px;
-        backdrop-filter: none;
     }
     .logo img{
         width: 40px;
