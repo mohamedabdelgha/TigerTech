@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+.bgcolor{
+    transition: 0.4s ease-in-out;
+    background: #ffffff;
+}
+.txtcolor{
+    color: #000000;
+}
+.bgcolor.dark{
+    background: #222;
+}
+.txtcolor.dark{
+    color: #ffffff;
+}
+body{
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+}
+.backBTN{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    background-color:#6C328C ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+    text-decoration: none;
+}
+.navigations h2{
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+.upbtn{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 901;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #6C328C;
+    font-size: 30px;
+    background-color: #F4F0E8;
+    box-shadow: 1px 1px 10px #F4F0E8;
+    transition: 0.5s ease-in;
+}
+.upbtn:hover, .menu:hover,#navs ul li a:hover,.backBTN:hover{
+    color: #F4F0E8;
+    background-color: #6C328C;
+    box-shadow: 1px 1px 10px #6C328C;
+}
+.upbtn i{cursor: pointer;}
+.circle{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 1px 1px 10px #6c328ca7;
+    position: absolute;
+    background-color: #6c328ca7;
+    opacity: 0.2;
+}
+.circle:nth-child(1){
+    width: 350px;
+    height: 350px;
+    top: -5%;
+    left: -5%;
+}
+.circle:nth-child(2){
+    width: 500px;
+    height: 500px;
+    top: 10%;
+    right:-10%;
+}
+.circle:nth-child(3){
+    display: none;
+    width: 600px;
+    height: 600px;
+    top: 14%;
+    right:25%;
+}
+header{
+    z-index: 1;
+    width: 90%;
+    padding:0 10px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid #D9D9D9;
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+header.fixed{
+    position: fixed;
+    top:0;
+    z-index: 150;
+}
+.logo,.navigations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.logo img{
+    width: 60px;
+}
+.navigations ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.navigations ul li{
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.navigations i{
+    font-size: 20px;
+}
+#theme-toggle{
+    width: 50px;
+    height: 25px;
+    box-shadow: 1px 1px 10px #2f052ba3;
+    border-radius: 30px;
+    margin: 0px 15px;
+    display: flex;
+    transition: 0.7s ease-in;
+    justify-content: start;
+}
+#theme-toggle.selected{
+    transition: 0.7s ease-in;
+    justify-content: end;
+}
+#cursor{
+    transition: 0.7s ease;
+    width: 45%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #6C328C;
+    border-radius: 50%;
+}
+.home{
+    z-index: 2;
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.home .blog{
+    width: 100%;
+    height: fit-content;
+    border-bottom: 2px solid #D9D9D9;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid #000000; */
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 30px;
+}
+.blog .bloghead{
+    width: 100%;
+    border-bottom: 2px solid #D9D9D9;
+    height: fit-content;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    text-transform: capitalize;
+}
+.blog .bloghead img{
+    width: 7%;
+}
+.blog .bloghead div{
+    width: 70%;    
+}
+.blog .bloghead h3{
+    width: 30%;
+}
+.blog .blogcontent{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.blog .blogcontent p{
+    width: 95%;
+    margin: 20px 0 ;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+}
+.blog .bordercon{
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.blog .blogsources{
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    justify-content: start ;
+    align-items: start;
+    flex-direction: column;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.blog .blogreact{
+    width: 25%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    flex-direction: row;
+}
+.blog .blogsources h3{
+    font-size: 1.4em;
+    text-decoration-line: overline;
+}
+.blog .blogsources p{
+    color: rgb(95, 196, 236);
+}
+
+.blog .blogreact i{
+    font-size: 30px;
+    color: #6C328C;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+
+}
+
+.blog .blogreact i:hover{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+@media (max-width:1080px) {
+    .circle{
+        position: relative;
+    }
+    .circle:nth-child(1){
+        display: none;
+    }
+    .circle:nth-child(2){
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    header{
+        padding: 10px 0;
+    }
+    .blog .bloghead div{
+        width: 60%;    
+    }
+    .blog .bloghead h3{
+        font-size: 15px;
+    }
+    .home .blog{
+    padding: 10px;}
+}
