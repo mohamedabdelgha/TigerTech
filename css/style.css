@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:wght@100..900&display=swap');
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -233,7 +232,7 @@ body{
 }
 header{
     z-index: 1;
-    width: 80%;
+    width: 90%;
     padding:0 ;
     height: fit-content;
     display: flex;
@@ -245,7 +244,6 @@ header{
 }
 header.fixed{
     position: fixed;
-    width:80%;
     top:0;
     z-index: 150;
     backdrop-filter: blur(15px);
@@ -320,6 +318,11 @@ header.fixed{
     height: 80%;
     transform: translate(0,-50%);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
     opacity: 0;
     animation: showcoontent 1s ease-in-out  0.6s 1 forwards;
 }
@@ -345,11 +348,12 @@ header.fixed{
     font-size: 20px;
     font-weight: 400;
     margin: 10px 0 30px 30px;
-    width: 75%;
+    width: 85%;
     line-height: 35px;
     word-spacing: 2px;
 }
 .textanime {
+    width: 85%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -397,7 +401,7 @@ header.fixed{
     100%{left: 0%;}
 }
 .rightcon .navs{
-    width: 100%;
+    width: 85%;
     padding: 0 0 0 30px;
     display: flex;
     align-items: center;
@@ -405,18 +409,18 @@ header.fixed{
     gap:  100px;
 }
 .rightcon .navs div{
-    width: 90%;
+    width: 100%;
     height: fit-content;
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 .rightcon .navs a:nth-child(1){
     text-decoration: none;
     color: #6C328C;
     font-size: 18px;
-    width: 25%;
+    width: 30%;
     padding: 5px;
     height: fit-content;
     display: flex;
@@ -432,7 +436,7 @@ header.fixed{
     text-decoration: none;
     color: #fff;
     font-size: 20px;
-    width: 25%;
+    width: 30%;
     padding: 10px 5px;
     height: fit-content;
     display: flex;
@@ -465,7 +469,7 @@ header.fixed{
     color: #6C328C;
 }
 .rightcon .links{
-    width: 100%;
+    width: 85%;
     height: fit-content;
     margin: 60px 0 0 0;
     color: #000;
@@ -475,37 +479,91 @@ header.fixed{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    background: #6C328C;
+    padding: 10px;
+    border-radius: 10px;
 }
 .rightcon .links a{
     text-decoration: none;
-    color: #6C328C;
+    color: #ffffff;
     transition: 0.4s ease-in;
 }
 .rightcon .links a:hover{
-    color: #000000;
+    color: #b791d9;
+    translate:0 -10px;
+    transform:scale(1.5);
 }
 .home .leftcon {
+    position: relative;
     width: 35%;
     height: 80%;
     transform: translate(0,-50%);
     opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     animation: showcoontent 1s ease-in-out  0.6s 1 forwards;
 }
-.leftcon div{
-    border-radius: 29% 71% 74% 26% / 30% 36% 64% 70%  ;
-    width: 100%;
-    height: 100%;
-    box-shadow: 10px 10px 15px #6c328c94;
-    animation: 3s  show infinite;
+.leftcon .imagecon{
+    border-radius: 130px;
+    width: 30%;
+    height: 70%;
+    z-index: 2;
     overflow: hidden;
 }
-.leftcon div img{width: 100%;height: 100%; object-fit: cover;}
+.leftcon .imagecon:nth-child(2){
+    margin-top: 50px;
+    box-shadow: 10px 10px 25px #6c328c94;
+    animation: 3s  show infinite;
+}
+.leftcon .imagecon:nth-child(1) img{width: 100%;height: 100%; object-fit: cover; object-position:left;}
+.leftcon .imagecon:nth-child(2) img{width: 100%;height: 100%; object-fit: cover;object-position:center;}
+.leftcon .imagecon:nth-child(3) img{width: 100%;height: 100%; object-fit: cover;object-position:right;}
 @keyframes show {
     40%,60%{
         transition: 0.3s ease-in-out;
         box-shadow: 10px 10px 35px #6c328cbc;
     }
 }
+.leftcon .dotscon{
+    width: 45%;
+    height: 25%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    top: 5%;
+    left: -5%;
+}
+.leftcon .dotscon2{
+    width: 45%;
+    height: 25%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: rotate(180deg);
+    gap: 20px;
+    bottom: 5%;
+    right: -5%;
+}
+.leftcon .dotscon .dots,.leftcon .dotscon2 .dots{
+    width:5%;
+    height: 7%;
+    border-radius: 50%;
+    background:#6c328cdc;
+    box-shadow: 2px 2px 5px #6C328C;
+}
+
 .about{
     width: 100%;
     height: 100vh;
@@ -741,7 +799,7 @@ header.fixed{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 .team h1{
     font-size: 2.3em;
@@ -750,11 +808,17 @@ header.fixed{
 }
 .team .bottom .right{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     height: fit-content;
     position: relative;
 }
+.team .bottom .right div {
+    width: 50%;
+}
 .team .bottom .right table{
-    width: 80%;
+    width: 100%;
 }
 .team .bottom .right table th{
     font-size: 1.8em;
@@ -781,7 +845,7 @@ header.fixed{
 }
 .team .bottom .right .skills{
     list-style: none;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -814,7 +878,7 @@ header.fixed{
 }
 .team .bottom .right .experince {
     list-style: none;
-    width: 70%;
+    width: 100%;
 }
 .team .bottom .right .experince li{
     width: 80%;
@@ -829,21 +893,46 @@ header.fixed{
 }
 .team .bottom .left{
     width: 90%;
+    margin-top: 30px;
     padding: 0 10px 0 0;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 5;
+    background: #b791d9;
+    border-radius: 10px;
+}
+.team .bottom .left .div1 {
+    width: 60%;
     height: fit-content;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+}
+.team .bottom .left .div2 {
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.team .bottom .left .div2 img{
+    width: 50%;
+    border-radius: 15px 15px 0 0;
 }
 .team .bottom .left .card{
-    width: 230px;
     z-index: 3;
-    height: 200px;
-    background: #6C328C;
-    box-shadow: 1px 1px 10px #6C328C;
+    width: 100px;
+    height: 100px;
+    background: #D9D9D9;
+    box-shadow: 1px 1px 15px #D9D9D9;
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -852,21 +941,20 @@ header.fixed{
     flex-direction: column;
     transition: 0.4s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 .team .bottom .left .card:hover{
     background: #D9D9D9;
     box-shadow: 1px 1px 25px #D9D9D9;
-    color: #6C328C;
     transform: scale(1.1);
 }
 .team .bottom .left .card.selected{
-    background: #D9D9D9;
-    box-shadow: 1px 1px 25px #D9D9D9;
-    color: #6C328C;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 .team .bottom .left .card img{
-    width: 100px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .prtofolio{
     width: 100%;
@@ -1054,7 +1142,7 @@ header.fixed{
     overflow-y: scroll;
 }
 .prtofolio2 .cardsCon .card{
-    min-height: 50%;
+    min-height: 40%;
     width: 95%;
     overflow: hidden;
     position: relative;
@@ -1202,6 +1290,7 @@ header.fixed{
     box-shadow: 1px 1px 15px #00000078;
     transition: 0.4s ease;
     margin: 10px;
+    z-index: 5;
     transition: 0.4s ease-in;
 }
 .FeedBack .commentsCon .comment:hover{transform: scale(1.015);}
@@ -1294,6 +1383,64 @@ header.fixed{
     top: 75%;
     right:16%;
     transform: rotate(270deg);
+}
+.FeedBack .custom{z-index: 0;}
+.FeedBack .custom .image_containers{
+    position: absolute;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px #6C328C;
+    border:4px solid #6C328C;
+    border-top:1px solid #6C328C;
+    z-index: 0;
+    user-select: none; 
+}
+.FeedBack .custom .image_containers img{
+    user-select: none; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.FeedBack .custom .image_containers:nth-child(1){
+    top: 15%;
+    left: 15%;
+    height: 70px;
+    width: 70px;
+}
+.FeedBack .custom .image_containers:nth-child(2){
+    top: 30%;
+    left: 10%;
+}
+.FeedBack .custom .image_containers:nth-child(3){
+    top: 45%;
+    left: 15%;
+    width: 50px;
+    height: 50px;
+}
+.FeedBack .custom .image_containers:nth-child(4){
+    top: 60%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+}
+.FeedBack .custom .image_containers:nth-child(5){
+    top: 15%;
+    right: 7%;
+}
+.FeedBack .custom .image_containers:nth-child(6){
+    top: 35%;
+    right: 15%;
+    width: 50px;
+    height: 50px;
+}
+.FeedBack .custom .image_containers:nth-child(7){
+    top: 50%;
+    right: 5%;
+    width: 70px;
+    height: 70px;
 }
 .sendcon{
     width: 90%;
@@ -1618,6 +1765,7 @@ header.fixed{
 }
 .footer ul{
     list-style: none;
+    z-index: 1;
 }
 .footer ul li {
     width: 100%;
@@ -1628,11 +1776,13 @@ header.fixed{
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
+    z-index: 1;
 }
 .footer ul img{
     width: 60px;
 }
 .footer ul li a{
+    z-index: 1;
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
@@ -1642,6 +1792,48 @@ header.fixed{
 .footer ul li a:hover{
     color: #6C328C;
     transform: scale(1.15);
+}
+.footer .icons{z-index: 0;}
+.footer .icons i{
+    position: absolute;
+    z-index: 0;
+    font-size: 70px;
+    color: #6C328C;
+    opacity: 0.5;
+}
+.footer .icons i:nth-child(1){
+    top: 5%;
+    left: 5%;
+    transform: rotate(45deg);
+}
+.footer .icons i:nth-child(2){
+    top: 70%;
+    left: 5%;
+    transform: rotate(45deg);
+}
+.footer .icons i:nth-child(3){
+    top: 20%;
+    left: 40%;
+    transform: rotate(0);
+}
+.footer .icons i:nth-child(4){
+    top: 5%;
+    right: 15%;
+    transform: rotate(120deg);
+}
+.footer .icons i:nth-child(5){
+    bottom: 15%;
+    right: 35%;
+    font-size: 100px;
+    transform: rotate(45deg);
+}
+.footer .icons i:nth-child(6){    
+    top: 5%;
+    right:5%;
+    transform: rotate(45deg);}
+.footer .icons i:nth-child(7){
+    right: 1%;
+    transform: rotate(45deg);
 }
 .footer .copyrights{
     width: 100%;
@@ -1665,22 +1857,29 @@ header.fixed{
     padding-right:15px ;
 }
 @media (max-width:1080px) {
-    .circle{
-        position: relative;
-    }
     .circle:nth-child(1){
-        display: none;
+        width: 150px;
+        height: 150px;
+        top: -1%;
+        left: -5%;
     }
     .circle:nth-child(2){
-        display: none;
+        width: 355px;
+        height: 355px;
+        top: 4%;
+        right:0%;
     }
     .circle:nth-child(3){
-        display: none;
+        width: 600px;
+        height: 600px;
+        top: 14%;
+        right:25%;
     }
     #menubtn{display: flex;}
     header{
         width: 90%;
         padding:0 5px;
+        backdrop-filter: none;
     }
     .logo img{
         width: 40px;
@@ -1722,15 +1921,16 @@ header.fixed{
     }
     .rightcon h1{
         font-size: 20px;
+        font-weight: 700;
         padding: 0 0 0 10px;
+    }
+    .rightcon .navs{
+        width: 90%;
+        justify-content: center;
     }
     .rightcon p{
         font-size: 18px;
         font-weight: 400;
-        margin: 10px 0 30px 30px;
-        width: 75%;
-        line-height: 35px;
-        word-spacing: 2px;
     }
     .textanime {
         display: none;
@@ -1762,11 +1962,18 @@ header.fixed{
         font-size: 20px;
     }
     .rightcon .links{
+        flex-wrap: nowrap;
+        overflow-x: auto;
         margin: 20px;
         font-size: 30px;
     }
     .rightcon .links a{
-        width: 25%;
+        width: 20%;
+    }
+    .rightcon .links a:hover{
+        color: #b791d9;
+        translate:0 ;
+        transform:scale(1.1);
     }
     .home .leftcon {
         padding: 20px 0;
@@ -1798,7 +2005,7 @@ header.fixed{
     }
     .about .secondcon h1{
         font-size: 1.8em;
-        margin: 20px
+        margin: 20px 10px;
     }
     .about .secondcon h2{
         font-size: 1.2em;
@@ -1821,14 +2028,15 @@ header.fixed{
         opacity: 0.2;
         width: 400px;
         height: 400px;
-        top: 20%;
+        top: 15%;
         left: -10%;
     }
     .services .top div h1{
         font-size: 1.8em;
     }
     .services .bottom{
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .services .bottom .card{
         width: 80%;
@@ -1843,8 +2051,12 @@ header.fixed{
     .prtofolio2{
         display: flex;
     } 
+    .team .bottom{flex-direction: column-reverse;}
+    .team .bottom .right{
+        flex-direction: column;
+    }
     .team .bottom .right table{
-        width: 95%;
+        width: 100%;
     }
     .team .bottom .right table th{
         font-size: 1.2em;
@@ -1869,20 +2081,24 @@ header.fixed{
     .team .bottom .right .experince li{
         width: 80%;
     }
+    .team .bottom .right div {
+        width: 100%;
+    }
     .team .bottom .left{
-        width: 90%;
-    justify-content: center;
+        margin-top: 70px;
+    }
+    .team .bottom .left .div1 {
+        width: 100%;
+    }
+    .team .bottom .left .div2 {
+        display: none;
     }
     .team .bottom .left .card{
-        width: 250px;
-        height: 150px;
-        border-radius:10px ;
+        width: 90px;
+        height: 90px;
     }
-    .team .bottom .left .card img{
-        width: 70px;
-    }
-    .team .bottom .left .card h3{
-        font-size: 18px;
+    .team .bottom .left .card.selected{
+        transform: scale(1.2);
     }
     .FeedBack h1{
         font-size: 1.8em;
@@ -1892,11 +2108,12 @@ header.fixed{
     .FeedBack .commentsCon{
         width: 100%;
         height: 80%;
+        gap: 10px;
     }
     .FeedBack .commentsCon .comment{
-        height: 80%;
+        height: 70%;
         width: 80%;
-        margin:20px;
+        margin:45px;
     }
     .FeedBack .commentsCon .comment .discreption  h3{
         font-size: 20px;
@@ -1924,17 +2141,61 @@ header.fixed{
         top: 45%;
         left: -10%;
     }
-    .FeedBack i{display: none;}
+    .FeedBack i{font-size:20px ;}
+    .FeedBack .custom .image_containers{
+        width: 40px;
+        height: 40px;
+    }
+    .FeedBack .custom .image_containers:nth-child(1){
+        top: 5%;
+        left: 10%;
+        height: 70px;
+        width: 70px;
+    }
+    .FeedBack .custom .image_containers:nth-child(2){
+        top: 15%;
+        left: 10%;
+    }
+    .FeedBack .custom .image_containers:nth-child(3){
+        top: 85%;
+        left: 35%;
+        width: 50px;
+        height: 50px;
+    }
+    .FeedBack .custom .image_containers:nth-child(4){
+        top: 75%;
+        left: 10%;
+        width: 70px;
+        height: 70px;
+    }
+    .FeedBack .custom .image_containers:nth-child(5){
+        top: 15%;
+        right: 7%;
+    }
+    .FeedBack .custom .image_containers:nth-child(6){
+        top: 70%;
+        right: 15%;
+        width: 50px;
+        height: 50px;
+    }
+    .FeedBack .custom .image_containers:nth-child(7){
+        top: 50%;
+        right: 5%;
+        width: 70px;
+        height: 70px;
+    }
+    
     .sendcon{
         flex-direction: column;
     }
     .sendcon .left{
         height: 50%;
-        width: 100%;
+        width: 90%;
         gap: 5px;
+        padding: 5px 10px;
     }
     .sendcon .left h2{
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 600;
     }
     .sendcon .left p{
@@ -1942,7 +2203,8 @@ header.fixed{
         font-weight: 400;
         letter-spacing: 0px;
         line-height: 30px;
-        width: 100%;
+        width: 95%;
+        padding: 5px 0;
     }
     .sendcon .right{
         height: 50%;
@@ -1964,6 +2226,11 @@ header.fixed{
         width: 50%;
         height: 10%;
     }
+    .footer{
+        align-items: start;
+        padding-top: 50px;
+        gap: 5px;
+    }
     .footer .contact{
         position: absolute;
         top: -10%;
@@ -1981,15 +2248,42 @@ header.fixed{
     .footer ul{
         width: 40%; 
         font-size:18px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-    .footer ul:nth-child(3){
-        display: none;
-    }
-    .footer ul:nth-child(4){
-        display: none;
+    .footer ul li img{
+        width: 40px;
     }
     .footer ul li{ 
-        font-size:12px ;
+        text-align: center;
+        width: 100%;
+        font-size:12px;
+        padding: 10px;
+    }
+    .footer ul li a{ 
+        text-align: end;
+        width: 100%;
+        font-weight: 600;
+    }
+    .footer .icons i{
+        font-size: 50px;
+    }
+    .footer .icons i:nth-child(3){
+        top: 35%;
+        left: 15%;
+    }
+    .footer .icons i:nth-child(4){
+        right: 40%;
+        top: 50%;
+    }
+    .footer .icons i:nth-child(7){
+        right: 5%;
+        top: 40%;
+    }
+    .footer .icons i:nth-child(5){
+        font-size: 70px;
     }
     #detailcontainer2 .left{
         display: none;
@@ -2008,15 +2302,15 @@ header.fixed{
     }
     #detailcontainer2 .right .inputs input{
         font-size: 15px;
-        width: 100%;
+        width: 90%;
     }
     #detailcontainer2 .right .inputs textarea{
         font-size: 15px;
-        width: 100%;
+        width: 90%;
     }
     #detailcontainer2 .right .inputs div input{
         font-size: 18px;
-        width: 45%;
+        width: 40%;
         height: 100%;
         outline: none;
         border: none;

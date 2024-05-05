@@ -106,7 +106,66 @@ function getcomment(){
     })
 }
 getcomment();
+// ----------------------------------------------------------------------------------------------------------
+const dotsCON=document.querySelector(".dotscon");
+const dotsCON2=document.querySelector(".dotscon2");
+for(var i=0;i<30;i++){
+    const blocks1=document.createElement("div");
+    const blocks2=document.createElement("div");
+    blocks1.classList.add("dots");
+    blocks2.classList.add("dots");
+    dotsCON.appendChild(blocks1)
+    dotsCON2.appendChild(blocks2)
+};
+// ----------------------------------------------------------------------------------------------------------
+// Define the image URLs (replace with your actual image URLs)
+const imageUrls = [
+    "img/person1.jpg",
+    "img/person2.jpg",
+    "img/person3.jpg",
+    "img/person4.jpg",
+    "img/person5.jpg",
+    "img/person6.jpg",
+    "img/person7.jpg",
+];
 
+// Get all the div elements (assuming they have a class 'image-container')
+const imageContainers = document.querySelector(".custom");
+for(let i=0; i<7; i++){
+    const images=document.createElement("div");
+    images.classList.add("image_containers");
+    imageContainers.appendChild(images)
+}
+// Function to shuffle an array (Fisher-Yates shuffle)
+function shuffleArray(array) {
+    let currentIndex = array.length,
+    randomIndex;
+
+    // While there are elements remaining
+    while (currentIndex !== 0) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // Swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+    ];
+    }
+
+    return array;
+}
+
+// Shuffle the image URLs
+const shuffledUrls = shuffleArray(imageUrls.slice()); // Create a copy to avoid modifying original array
+const image_containers = document.querySelectorAll('.image_containers')
+// Assign shuffled image URLs to each div
+image_containers.forEach((container, index) => {
+    const image = document.createElement("img");
+    image.src = shuffledUrls[index];
+    container.appendChild(image);
+});  
 //get projects function ----------------------------------------------------------------------------------------------------------
 function getProjects (){
     onSnapshot(docref3,(snapshot)=>{
@@ -351,6 +410,7 @@ closedetwin.onclick=()=>{
 }
 // team functions -----------------------------------------------------------------------------------------
 const team_card = document.querySelectorAll('#team_card');
+const selectedIIMG = document.getElementById("selectedIIMG");
 for(let i=0;i<team_card.length;i++){
 
     team_card[i].onclick=()=>{
@@ -361,9 +421,20 @@ for(let i=0;i<team_card.length;i++){
             div.style.display="none";
         });
         team_card[i].classList.add("selected");
+        const cardIMG = team_card[i].querySelector('img');
+        selectedIIMG.src = cardIMG.src;
         const metadata_i = team_card[i].getAttribute('metadata');
         const div_i = document.getElementById(metadata_i);
-        div_i.style.display='block';
+        div_i.style.display='flex';
+    }
+    window.onload=()=>{
+        team_card[0].classList.add("selected");
+        const metadata_i = team_card[0].getAttribute('metadata');
+        const div_i = document.getElementById(metadata_i);
+        div_i.style.display='flex';
+        const cardIMG = team_card[0].querySelector('img');
+        selectedIIMG.src = cardIMG.src;
+        
     }
 }
 //------------------------------------------------------------------------------------------

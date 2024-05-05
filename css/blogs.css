@@ -279,14 +279,24 @@ header.fixed{
     color: #F4F0E8;
 }
 @media (max-width:1080px) {
-    .circle{
-        position: relative;
-    }
     .circle:nth-child(1){
-        display: none;
+        width: 200px;
+        height: 200px;
+        top: -5%;
+        left: -5%;
     }
     .circle:nth-child(2){
-        display: none;
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        right:0;
+    }
+    .circle:nth-child(3){
+        display: flex;
+        width: 400px;
+        height: 400px;
+        top: 40%;
+        left:-25%;
     }
     .logo{
         display: none;
